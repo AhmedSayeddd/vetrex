@@ -1,0 +1,135 @@
+/* ===== General Styles ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+.auth-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.auth-container {
+  background: #111;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,255,100,0.5);
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  position: relative;
+}
+
+.auth-box {
+  flex: 1 1 300px;
+  transition: all 0.5s ease;
+}
+
+/* Hide login by default */
+#login-box {
+  display: none;
+}
+
+.auth-box h2 {
+  color: #00ff66;
+  text-shadow: 0 0 10px #00ff66;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 30px;
+  border: 2px solid #00ff66;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 10px #00ff66, 0 0 20px #00ff66;
+  border-color: #00ff66;
+}
+
+.phone-group {
+  display: flex;
+  align-items: center;
+}
+
+.phone-prefix {
+  color: #00ff66;
+  font-weight: bold;
+  margin-right: 10px;
+  text-shadow: 0 0 5px #00ff66, 0 0 10px #00ff66;
+}
+
+.btn-auth {
+  width: 100%;
+  padding: 12px;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid #00ff66;
+  color: #00ff66;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-auth::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,255,100,0.2), transparent 70%);
+  animation: pulseGlow 2.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(0.8); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 0.2; }
+  100% { transform: scale(0.8); opacity: 0.7; }
+}
+
+.btn-auth:hover {
+  background: #00ff66;
+  color: black;
+  box-shadow: 0 0 20px #00ff66, 0 0 40px #00ff66;
+  transform: scale(1.05);
+}
+
+.auth-footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.auth-footer a {
+  color: #00ff66;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-shadow: 0 0 10px #00ff66;
+}
